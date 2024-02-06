@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
-import ChatPage from './components/ChatPage'
-import SignIn from './components/SignIn'
-import SignUp from './components/SignUp'
-import Profile from './components/Profile'
+import ChatPage from './pages/ChatPage'
+import SignIn from './pages/SignIn'
+import SignUp from './pages/SignUp'
+import Profile from './pages/Profile'
 
 function App() {
   return (
