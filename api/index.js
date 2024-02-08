@@ -3,6 +3,7 @@ dotenv.config({ path: '../.env' });
 import express from 'express'; // Add "type": "module", in package.json to allow one to use import instead of require
 import mongoose from 'mongoose';
 import userRoutes from './routes/userRoutes.js';
+import authRoutes from './routes/authRoutes.js';
 
 mongoose.connect(process.env.MONGODB_URI)
   .then(() => {
@@ -13,9 +14,11 @@ mongoose.connect(process.env.MONGODB_URI)
   });
 
 const app = express();
+app.use(express.json());
 
 app.listen(3000, () => {
   console.log('Server listening on port 3000');
 })
 
-app.use("/api/user", userRoutes)
+app.use("/api/register", userRoutes);
+app.use("/api/login", authRoutes);
