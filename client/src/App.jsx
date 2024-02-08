@@ -7,15 +7,17 @@ import Header from './components/Header'
 
 function App() {
   return (
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path='/' element={<ChatPage />} />
-        <Route path='/login' element={<SignIn />} />
-        <Route path='/register' element={<SignUp />} />
-        <Route path='/profile' element={<Profile />} />
-      </Routes>
-    </BrowserRouter>
+    <div className='min-h-screen'>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path='/' element={<ChatPage />} />
+          <Route path='/login' element={<SignIn />} />
+          <Route path='/register' element={<SignUp />} />
+          <Route path='/profile' element={<Profile />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   )
 }
 
